@@ -61,7 +61,7 @@ const Hero = () => {
         id="cta"
         className="flex flex-col items-center opacity-0 translate-y-20"
       >
-        <a href="#highlights" className="btn">
+        <a href="#highlights" className="btn transition-all">
           Buy
         </a>
         <p className="font-normal text-xl">From $199/month or $999</p>
