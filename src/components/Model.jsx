@@ -46,7 +46,24 @@ const Model = () => {
   }, [size]);
 
   useGSAP(() => {
-    gsap.to("#heading", { y: 0, opacity: 1 });
+    gsap.to("#heading", {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#heading",
+        start: "top 90%",
+        end: "top 50%",
+      },
+    });
+    gsap.to("#details", {
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: "#details",
+        start: "top 100%",
+        end: "top 50%",
+      },
+    });
   }, []);
 
   return (
@@ -95,9 +112,14 @@ const Model = () => {
           </div>
 
           <div className="mx-auto w-full">
-            <p className="text-sm font-light text-center mb-5">{model.title}</p>
+            <p
+              id="details"
+              className="text-sm font-light text-center mb-5 opacity-0"
+            >
+              {model.title}
+            </p>
 
-            <div className="flex-center">
+            <div id="details" className="flex-center opacity-0">
               <ul className="color-container">
                 {models.map((item, i) => (
                   <li
