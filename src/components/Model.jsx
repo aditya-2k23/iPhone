@@ -1,12 +1,14 @@
-import { useEffect, useRef, useState } from "react";
-import { Canvas } from "@react-three/fiber";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import * as THREE from "three";
 import ModelView from "./ModelView";
+import { useEffect, useRef, useState } from "react";
 import { yellowImg } from "../utils";
+
+import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+import { View } from "@react-three/drei";
 import { models, sizes } from "../constants";
-import { animateWithGsapTimeline } from "../utils/animations.js";
+import { animateWithGsapTimeline } from "../utils/animations";
 
 const Model = () => {
   const [size, setSize] = useState("small");
@@ -24,7 +26,9 @@ const Model = () => {
 
   const [smallRotation, setSmallRotation] = useState(0);
   const [largeRotation, setLargeRotation] = useState(0);
+
   const tl = gsap.timeline();
+
   useEffect(() => {
     if (size === "large") {
       animateWithGsapTimeline(tl, small, smallRotation, "#view1", "#view2", {
@@ -84,8 +88,9 @@ const Model = () => {
                 right: 0,
                 overflow: "hidden",
               }}
+              eventSource={document.getElementById("root")}
             >
-              {/* Your Three.js components go here */}
+              <View.Port />
             </Canvas>
           </div>
 
