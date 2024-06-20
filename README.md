@@ -1,6 +1,6 @@
 # Apple's iPhone 15
 
-![apple](./public/assets/images/apple.svg)
+![Apple](./public/assets/images/apple.svg)
 This is the clone of Apple's iPhone 15 website.
 Check out the live demo [here](https://apple-iphone-15-sigma.vercel.app/).
 
@@ -21,6 +21,12 @@ https://github.com/aditya-2k23/iPhone/assets/131287474/21c3db43-4083-4dd4-9477-1
 - [GSAP](https://greensock.com/gsap/)
 - [threeJS](https://threejs.org/)
 - [Sentry](https://sentry.io/)
+
+## Features
+
+- 3D Model of iPhone 15
+- Smooth Animations
+- Responsive Design
 
 ### Getting Started on local machine
 
