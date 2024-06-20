@@ -10,6 +10,8 @@ Check out the live demo [here](https://apple-iphone-15-sigma.vercel.app/).
 
 ---
 
+https://github.com/aditya-2k23/iPhone/assets/131287474/21c3db43-4083-4dd4-9477-19315d7e31cc
+
 ---
 
 ## Tech Stack
